@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SF Pro - Regular */
+@font-face {
+  font-family: "SF Pro";
+  src: url("../public/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: 400; /* Normal weight */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SF Pro - Medium */
+@font-face {
+  font-family: "SF Pro";
+  src: url("../public/fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SF Pro - Black Italic */
+@font-face {
+  font-family: "SF Pro";
+  src: url("../public/fonts/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
+  font-weight: 900; /* Black weight */
+  font-style: italic;
+  font-display: swap;
+}
+
+/* SF Pro - Bold */
+@font-face {
+  font-family: "SF Pro";
+  src: url("../public/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SF Pro - Heavy Italic */
+@font-face {
+  font-family: "SF Pro";
+  src: url("../public/fonts/SFPRODISPLAYHEAVYITALIC.OTF") format("opentype");
+  font-weight: 900; /* Heavy weight, similar to Black */
+  font-style: italic;
+  font-display: swap;
+}
+
+/* SF Pro - Light Italic */
+@font-face {
+  font-family: "SF Pro";
+  src: url("../public/fonts/SFPRODISPLAYLIGHTITALIC.OTF") format("opentype");
+  font-weight: 300; /* Light weight */
+  font-style: italic;
+  font-display: swap;
+}
+
+/* SF Pro - Semibold Italic */
+@font-face {
+  font-family: "SF Pro";
+  src: url("../public/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF") format("opentype");
+  font-weight: 600; /* Semibold weight */
+  font-style: italic;
+  font-display: swap;
+}
+
+/* SF Pro - Thin Italic */
+@font-face {
+  font-family: "SF Pro";
+  src: url("../public/fonts/SFPRODISPLAYTHINITALIC.OTF") format("opentype");
+  font-weight: 100; /* Thin weight */
+  font-style: italic;
+  font-display: swap;
+}
+
+/* SF Pro - Ultrathin Italic */
+@font-face {
+  font-family: "SF Pro";
+  src: url("../public/fonts/SFPRODISPLAYULTRATHINITALIC.OTF") format("opentype");
+  font-weight: 200; /* Ultrathin weight */
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Set the default font for the body */
+body {
+  font-family: "SF Pro", sans-serif;
+}
