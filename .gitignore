@@ -1,0 +1,4 @@
+fine-tuned-model/
+*.safetensors
+/vendor
+.env
