@@ -1,6 +1,18 @@
 <?php
 require_once '../auth/_dbConfig/_dbConfig.php';
 
+// --- Fetch Active Logo ---
+$logoPath = '../resources/svg/logo.svg'; // Default logo
+$logo_stmt = $conn->prepare("SELECT logo_path FROM tbl_logo WHERE status = 1 LIMIT 1");
+if ($logo_stmt) {
+  $logo_stmt->execute();
+  $logo_result = $logo_stmt->get_result();
+  if ($logo_row = $logo_result->fetch_assoc()) {
+    $logoPath = ADMIN_BASE_PATH . $logo_row['logo_path'];
+  }
+  $logo_stmt->close();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Retrieve submitted data
   $transactionType = isset($_POST['transaction_type']) ? $_POST['transaction_type'] : 'Not provided';
@@ -42,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- Logo -->
     <div class="flex items-center justify-center gap- mb-5 mt-6">
-      <img src="../resources/svg/logo.svg" alt="URSatisfaction Logo" class="h-20">
+      <img src="<?= htmlspecialchars($logoPath) ?>" alt="URSatisfaction Logo" class="h-20">
       <div class="text-left">
         <h2 class="text-2xl font-bold leading-tight">
           <span class="text-[#95B3D3]">URS</span><span class="text-[#F1F7F9]">atisfaction</span>
